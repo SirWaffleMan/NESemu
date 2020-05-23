@@ -1,4 +1,5 @@
 #pragma once
+#include "ROM.h"
 /*
 	6502 NTSC NES/Famicom
 
@@ -18,5 +19,18 @@ private:
 	unsigned char Y;
 	unsigned char S;		// Stack Pointer
 	unsigned short int PC;	// Program Counter
-	bool P[6];				// Status Register
+	bool P[6] = {			// Status Register
+		false,	// Carry
+		false,	// Zero
+		false,	// Interrupt enable/ disable
+		false,	// Decmial Mode
+				// 4, 5 Dont exist
+		false,	// Overflow
+		false	// Negative
+	};
+	/* NES COMPONENTS */
+	ROM* rom;
+public:
+	void tick();
+	CPU(ROM*);
 };

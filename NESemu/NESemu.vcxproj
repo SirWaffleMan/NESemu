@@ -148,7 +148,11 @@
     <ClCompile Include="src\app\NESemu.cpp" />
     <ClCompile Include="src\graphics\Window.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\nes\APU.cpp" />
+    <ClCompile Include="src\nes\CPU.cpp" />
     <ClCompile Include="src\nes\NES.cpp" />
+    <ClCompile Include="src\nes\PPU.cpp" />
+    <ClCompile Include="src\nes\ROM.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\app\NESemu.h" />

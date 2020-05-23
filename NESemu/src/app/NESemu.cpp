@@ -3,7 +3,7 @@
 NESemu::NESemu(std::string romDir) : romDirectory(romDir)
 {
 	m_nes_window = new Window("NESemu", 256, 240);
-	m_nes = new NES();
+	m_nes = new NES(romDir);
 }
 
 NESemu::~NESemu()
@@ -32,6 +32,8 @@ void NESemu::run()
 				exit = true;
 			}
 		}
+
+		m_nes->tick();
 
 		/* RENDER SCREEN */
 		// Clear the screen

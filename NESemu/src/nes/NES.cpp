@@ -1,13 +1,25 @@
 #include "NES.h"
 
-NES::NES()
+#include <iostream>
+
+NES::NES(std::string romDir)
 {
-	cpu = new CPU();
 	ppu = new PPU();
 	apu = new APU();
+	rom = new ROM(romDir);
+	cpu = new CPU(rom);
 }
 
 NES::~NES()
 {
 	delete cpu;
+}
+
+void NES::tick()
+{
+	cpu->tick();
+	for (int i = 0; i < 3; i++) {
+		ppu->tick();
+	}
+	apu->tick();
 }
