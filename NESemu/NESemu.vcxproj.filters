@@ -21,6 +21,9 @@
     <ClCompile Include="src\graphics\Window.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\app\NESemu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\graphics\Window.h">
@@ -39,6 +42,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\nes\ROM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\nes\NES.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,23 +1,21 @@
 #include "Window.h"
 #include <iostream>
 
-void Window::run()
-{
-	while (true) {
-		// Clear the screen
-		SDL_RenderClear(m_sdl_renderer);
-		// Render Screen
-		SDL_RenderPresent(m_sdl_renderer);
-		// Wait delay
-		SDL_Delay(1000);
-	}
-}
-
 Window::Window(std::string title, int width, int height) : m_title(title), m_width(width), m_height(height)
 {
 	if (!init()) {
 		//TODO: Handle error
 	}
+}
+
+SDL_Renderer* Window::getRenderer()
+{
+	return m_sdl_renderer;
+}
+
+SDL_Window* Window::getWindow()
+{
+	return m_sdl_window;
 }
 
 bool Window::init()

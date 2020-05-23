@@ -1,5 +1,6 @@
 #include <iostream>
 #include <SDL.h>
+#include "app/NESemu.h"
 #include "graphics/Window.h"
 
 int main(int argc, char* argv[]) {
@@ -9,11 +10,9 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	// Create Window
-	Window window("NESemu", 256, 240);
-
-	// Run window
-	window.run();
+	// Create and run application
+	NESemu app("sample/rom/directory");
+	app.run();
 
 	return 0;
 }

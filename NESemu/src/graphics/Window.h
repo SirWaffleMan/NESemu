@@ -12,7 +12,8 @@ private:
 	SDL_Renderer* m_sdl_renderer = nullptr;
 public:
 	Window(std::string title, int width, int height);
-	void run();
+	SDL_Renderer* getRenderer();
+	SDL_Window* getWindow();
 private:
 	bool init();
 };

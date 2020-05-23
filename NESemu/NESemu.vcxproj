@@ -145,6 +145,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\app\NESemu.cpp" />
     <ClCompile Include="src\graphics\Window.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
@@ -153,6 +154,7 @@
     <ClInclude Include="src\graphics\Window.h" />
     <ClInclude Include="src\nes\APU.h" />
     <ClInclude Include="src\nes\CPU.h" />
+    <ClInclude Include="src\nes\NES.h" />
     <ClInclude Include="src\nes\PPU.h" />
     <ClInclude Include="src\nes\ROM.h" />
   </ItemGroup>
